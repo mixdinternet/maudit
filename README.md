@@ -33,3 +33,12 @@ Abra o arquivo `config/app.php` e adicione
 ## Arquivos de configurações
 
 `php artisan vendor:publish --provider="Mixdinternet\Maudit\Providers\MauditServiceProvider" --tag="config"`
+
+## Migração
+
+Rode a migração com o comando
+`php artisan migrate --path=vendor/venturecraft/revisionable/src/migrations`
+
+ou copie (gosto mais desta opção)
+
+`cp vendor/venturecraft/revisionable/src/migrations/2013_04_09_062329_create_revisions_table.php database/migrations/`
