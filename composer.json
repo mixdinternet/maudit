@@ -1,0 +1,24 @@
+{
+    "name": "mixdinternet/maudit",
+    "description": "Lista as ações dos usuários no admix",
+    "keywords": ["laravel", "audit", "log"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Irineu Martins Junior",
+            "email": "irineu@mixd.com.br",
+            "homepage": "http://www.mixd.com.br/",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9",
+        "laravel/framework": "5.1.*",
+        "venturecraft/revisionable": "1.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mixdinternet\\Maudit\\": "src/"
+        }
+    }
+}
