@@ -29,3 +29,7 @@ ou
 Abra o arquivo `config/app.php` e adicione
 
 `Mixdinternet\Maudit\Providers\MauditServiceProvider::class`
+
+## Arquivos de configurações
+
+`php artisan vendor:publish --provider="Mixdinternet\Maudit\Providers\MauditServiceProvider" --tag="config"`
