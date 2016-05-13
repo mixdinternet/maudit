@@ -102,5 +102,9 @@
 @endsection
 
 @section('pagination')
-    {!! $revisions->appends($search)->render() !!}
+    {!! $revisions->appends(request()->except(['page']))->render() !!}
+@endsection
+
+@section('pagination-showing')
+    @include('admin.partials.pagination-showing', ['model' => $revisions])
 @endsection
