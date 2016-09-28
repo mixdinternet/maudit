@@ -14,7 +14,7 @@ Adicione no seu composer.json
 
 ```js
   "require": {
-    "mixdinternet/maudit": "0.1.*"
+    "mixdinternet/maudit": "0.2.*"
   }
 ```
 
