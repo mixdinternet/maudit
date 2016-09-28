@@ -3,8 +3,7 @@
 namespace Mixdinternet\Maudit\Providers;
 
 use Illuminate\Support\ServiceProvider;
-
-use Menu;
+use Pingpong\Menus\MenuFacade as Menu;
 
 class MauditServiceProvider extends ServiceProvider
 {
