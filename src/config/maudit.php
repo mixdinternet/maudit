@@ -2,7 +2,7 @@
 
 return [
     'alias' => [
-        'App\User' => 'Usuários &raquo; Usuários'
-        , 'App\Role' => 'Usuários &raquo; Grupos'
+        #'App\User' => 'Usuários &raquo; Usuários'
+        #, 'App\Role' => 'Usuários &raquo; Grupos'
     ]
 ];

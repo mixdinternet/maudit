@@ -7,11 +7,6 @@ use Pingpong\Menus\MenuFacade as Menu;
 
 class MauditServiceProvider extends ServiceProvider
 {
-    /**
-     * Bootstrap the application services.
-     *
-     * @return void
-     */
     public function boot()
     {
         $this->setMenu();
@@ -20,17 +15,14 @@ class MauditServiceProvider extends ServiceProvider
 
         $this->loadViews();
 
+        $this->loadMigrations();
+
         $this->publish();
     }
 
-    /**
-     * Register the application services.
-     *
-     * @return void
-     */
     public function register()
     {
-
+        $this->loadConfigs();
     }
 
     protected function setMenu()
@@ -55,14 +47,24 @@ class MauditServiceProvider extends ServiceProvider
         if (!$this->app->routesAreCached()) {
             $this->app->router->group(['namespace' => 'Mixdinternet\Maudit\Http\Controllers'],
                 function () {
-                    require __DIR__ . '/../Http/routes.php';
+                    require __DIR__ . '/../routes/web.php';
                 });
         }
+    }
+
+    protected function loadMigrations()
+    {
+        $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
     }
 
     protected function loadViews()
     {
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'mixdinternet/maudit');
+    }
+
+    protected function loadConfigs()
+    {
+        $this->mergeConfigFrom(__DIR__ . '/../config/maudit.php', 'maudit');
     }
 
     protected function publish()
