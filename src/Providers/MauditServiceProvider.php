@@ -37,7 +37,7 @@ class MauditServiceProvider extends ServiceProvider
         });
 
         Menu::modify('adminlte-permissions', function ($menu) {
-            $menu->url('admin.maudit.index', 'Logs', 210, ['except' => ['create', 'edit', 'destroy', 'trash']]);
+            $menu->url('admin.maudit', 'Logs', 210, ['except' => ['create', 'edit', 'destroy', 'trash']]);
         });
 
     }
